@@ -1,0 +1,78 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "Agoda Tax Deposit Calculator",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "webpack",
+    "build:electron": "webpack --config webpack.electron.config.js",
+    "electron": "electron .",
+    "start:electron": "npm run build && npm run build:electron && npm run electron",
+    "electron-pack": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "build": {
+    "appId": "com.magicbrosllc.reservationcalculator",
+    "productName": "Agoda Deposit Calculator",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "src/main.ts",
+      "public/**/*",
+      "!**/*.map"
+    ],
+    "extraResources": [
+      "public"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "public/icon.png"
+    }
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "electron": "^24.1.2",
+    "electron-builder": "^22.14.10",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
+  }
+}

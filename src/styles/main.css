@@ -1,0 +1,83 @@
+/* General styles */
+html {
+    font-size: 18px;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  h1, h2 {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    padding-top: 35px;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #577ae3;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #536dfe;
+  }
+  
+  button:disabled {
+    background-color: #757575;
+    cursor: not-allowed;
+  }
+
+  .back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  .restart-button {
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    z-index: 10;
+  }
+  
+  /* Input styles */
+  input {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #424242;
+    color: #ffffff;
+    background-color: #424242;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Results styles */
+  div {
+    margin-bottom: 1rem;
+  }
+  
